@@ -1,0 +1,15 @@
+/* 下拉刷新动画 */
+.reach_load{width:100%; position:absolute; left:0; top:-100rpx; height:50rpx; text-align: center;}
+.la-ball-pulse.la-2x {width: 108rpx;height: 36rpx;display: inline-block;	margin-top: 20rpx;}
+.la-ball-pulse {display: block;	font-size: 0;	position: relative;	-webkit-box-sizing: border-box;	box-sizing: border-box;}
+.la-ball-pulse.la-2x>view {width: 16rpx;height: 16rpx;	margin: 6rpx;	background: #36c3fe;	border-radius: 100%;	display: inline-block;-webkit-animation: ball-pulse 1s ease infinite;	animation: ball-pulse 1s ease infinite;
+	position: relative;}
+.la-ball-pulse>view:nth-child(1) {-webkit-animation-delay: -200ms;animation-delay: -200ms;}
+.la-ball-pulse>view:nth-child(2) {	-webkit-animation-delay: -100ms;	animation-delay: -100ms;}
+.la-ball-pulse>view:nth-child(3) {	-webkit-animation-delay: 0s;	animation-delay: 0s;}
+@keyframes ball-pulse {
+0%, 60%, 100% {opacity:1;-webkit-transform:scale(1);transform:scale(1);}
+30% {opacity:.1;-webkit-transform:scale(0.01);transform:scale(0.01);}}
+@-webkit-keyframes ball-pulse {
+0%, 60%, 100% {opacity:1;-webkit-transform:scale(1);transform:scale(1);}
+30% {opacity:.1;-webkit-transform:scale(0.01);transform:scale(0.01);}}

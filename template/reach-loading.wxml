@@ -1,0 +1,10 @@
+<!-- 下拉刷新动画 -->
+<template name="reach-loading" >
+  <view class='reach_load'>
+    <view class="la-ball-pulse la-2x">
+      <view></view>
+      <view></view>
+      <view></view>
+    </view>
+  </view>
+</template>

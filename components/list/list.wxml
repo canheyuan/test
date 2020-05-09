@@ -1,0 +1,46 @@
+<view class='act_list {{listName}}'  wx:if="{{listInfo.length!=0}}">
+  <block wx:for="{{listInfo}}" wx:key="{{index}}" wx:for-item="listInfo">
+ 
+    <view class='li' >
+      <icon class='ico_collect act' bindtap="collectPopShow" data-id="{{listInfo.activityId}}"></icon>
+
+      <!-- 状态status -->
+      <view class='btns'> 
+        <view class='status icons2 s_yellow' wx:if="{{listInfo.status==1}}">准备中</view>
+      </view>
+
+      <navigator class='top' url="/pages/activity/activity-details/activity-details?id={{listInfo.activityId}}" hover-class='none'>
+        <image class='img' src='{{listInfo.mainImg}}' binderror="errorImgFn" data-obj="listInfo[{{index}}].mainImg"></image>
+        <view class='info'>
+          <view class='h3'><!-- <icon class="icons ico_zd"></icon> -->{{listInfo.activityName}}</view>      
+          <view class='ico_txt'><icon class='icons ico_time'></icon>{{listInfo.beginTime}} 至 {{listInfo.endTime}}</view>  
+          <view class='ico_txt'><icon class='icons ico_dz'></icon><text>{{listInfo.address}}</text></view>   
+        </view>
+      </navigator>
+      <view class='btm'>
+        <view 
+          wx:if="{{listInfo.status==2 && listInfo.isJoined!=1}}" 
+          class='btn {{listInfo.status==3?"disabled":""}}' hover-class='none'
+          bindtap="applyBtnFn" data-url="/pages/activity/activity-apply/activity-apply?id={{listInfo.activityId}}"
+        >我要报名</view>
+        <view class='label' wx:if='{{listInfo.joinWay==1}}' style="width:180rpx;">
+          <icon class='icons ico_mf'></icon>免费报名
+        </view>
+        <view class='label' wx:if='{{listInfo.joinWay==2}}' style="width:180rpx;">
+          <icon class='icons ico_mf'></icon><text>{{listInfo.price}}</text>
+        </view>
+        <view class='label' style='margin-left:40rpx;'>
+          <icon class='icons ico_bm'></icon><text>{{listInfo.joinCount?listInfo.joinCount:'0'}}</text>人已报名
+        </view>
+      </view>
+     
+      <image wx:if="{{listInfo.isJoined==1}}" class='status_img' src='{{domainUrl}}/images/ybm_img.png' mode='widthFix' ></image> <!-- 报名成功图标 -->
+    </view>
+  
+  </block>
+  <view class='yd_title02' style='margin-bottom:30rpx;'><view class='txt'>{{isMoreData?'上拉加载更多':'没有更多了'}}</view></view>
+</view>
+
+
+<!-- 暂无状态 -->
+<list-nothing c-name="activity" wx:if="{{listInfo.length==0}}"></list-nothing>

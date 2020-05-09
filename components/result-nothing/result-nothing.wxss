@@ -1,0 +1,9 @@
+.blue_btn{height:100rpx; line-height:100rpx; text-align: center; border-radius:50px; background:#6592fe; color:#fff; font-size:40rpx; box-shadow: 0 10rpx 34rpx rgba(101,146,254,.62);}
+
+/* 结果组件页面 */
+.result_page{text-align: center; padding:100rpx 0 0;}
+.result_page .img{width:210rpx;height:210rpx; margin-bottom:50rpx;}
+.result_page .h3{display:block; font-size:40rpx; color:#333; margin-bottom:40rpx;}
+.result_page .p{display:block; font-size:30rpx; color:#666;}
+.result_page .check_txt{color:#2a99f1; font-size:28rpx; display: block; margin-top:30rpx;}
+.result_page .btm_btn{  width:480rpx; position:fixed; bottom:100rpx; left:50%; margin-left:-240rpx;}

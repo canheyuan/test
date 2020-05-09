@@ -1,0 +1,22 @@
+<view class='result_page {{pageData.className}}'>
+  <image wx:if="{{pageData.icon}}" class='img' src='{{domainUrl}}{{pageData.icon}}' mode='widthFix'></image><!-- 图标 -->
+  <text wx:if="{{pageData.title}}" class='h3'>{{pageData.title}}</text> <!-- 标题 -->
+  <text wx:if="{{pageData.des}}" class='p' wx:if="{{pageData.des}}">{{pageData.des}}</text><!-- 描述文字 -->
+  <!-- 文字小按钮 -->
+  <navigator 
+    class='check_txt' 
+    wx:if="{{pageData.details_btn}}" 
+    url='{{pageData.details_btn_url}}'
+  >
+  {{pageData.details_btn}}
+  </navigator>
+  <!-- 文字大按钮 -->
+  <navigator 
+    class='btm_btn blue_btn' 
+    wx:if="{{pageData.btm_btn}}" 
+    url='{{pageData.btm_btn_url}}' 
+    open-type='{{pageData.btm_btn_type}}'
+  >
+  {{pageData.btm_btn}}
+  </navigator>
+</view>

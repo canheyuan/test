@@ -1,0 +1,36 @@
+@import "/app.wxss";
+
+.act_list{padding:30rpx 25rpx;}
+.act_list .li{background:#fff; border-radius: 10rpx; margin-bottom: 30rpx; box-shadow: 0 5rpx 24rpx rgba(0,0,0,.1); position:relative; }
+
+.act_list .li .status{width:97rpx; height:42rpx; line-height:38rpx; background-position:-180rpx 0; font-size:24rpx; color:#fff; text-align: center; position:absolute; left:-5rpx; top:20rpx;}
+.act_list .li .s_blue{background-position: -70rpx 0;}
+.act_list .li .s_yellow{background-position: -180rpx 0;}
+.act_list .li .s_purple{background-position: -280rpx 0;}
+.act_list .li .s_gray{background-position: -395rpx 0;}
+
+.act_list .li .top{overflow:hidden; padding:15rpx 0 15rpx 15rpx; }
+.act_list .li .top .img{width:280rpx; height:192rpx; float:left; margin-right:20rpx; border-radius:10rpx;}
+.act_list .li .top .info{overflow:hidden; padding-top:10rpx; }
+.act_list .li .top .info .h3{font-size:34rpx; line-height:48rpx; font-weight:bold; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; -webkit-line-clamp: 2; margin-bottom:20rpx;}
+.act_list .li .top .info .h3 .ico_zd{width:80rpx; height:40rpx; background-position: -280rpx -160rpx; margin-right:10rpx; vertical-align: middle;}
+.act_list .li .top .info .ico_txt{display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; -webkit-line-clamp: 1;}
+.act_list .li .top .info .ico_time{ background-position:-120rpx -120rpx;}
+.act_list .li .top .info .ico_dz{ background-position:-300rpx -120rpx;}
+.act_list .li .btm{border-top:1rpx solid #e5e5e5; padding:15rpx; border-bottom-left-radius: 10rpx; border-bottom-right-radius: 10rpx; overflow: hidden; background:#fcfcfc;}
+.act_list .li .btm .btn{height:70rpx; line-height:70rpx;  text-align: center; border-radius:35px; box-sizing:border-box; background:#fff; color:#6592fe; font-size:28rpx; border:1rpx solid #6592fe; float:right; width:200rpx;}
+.act_list .li .btm .label{float:left; line-height:70rpx; color:#555555; font-size:28rpx;}
+.act_list .li .btm .label text{color:#ff6000;}
+.act_list .li .btm .label icon{display:inline-block; width:50rpx; height:50rpx; vertical-align: middle; margin-right:10rpx; position:relative; top:-2rpx;}
+.act_list .li .btm .label .ico_mf{background-position: -100rpx -420rpx;}
+.act_list .li .btm .label .ico_bm{background-position: -150rpx -420rpx;}
+.status_img{display:inline-block; width:150rpx; height:150rpx; position:absolute; bottom:20rpx; right:20rpx;}
+
+/* 进行中 */
+.act_list .underway_li .status{background-position: -70rpx 0;} 
+.act_list .underway_li .btm .btn{display:none;}
+/* 已结束 */
+.act_list .finish_li .status{background-position: -395rpx 0;} 
+.act_list .finish_li .btm .btn{background:#ccc; border-color:#ccc;  color:#fff;}
+
+

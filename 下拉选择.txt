@@ -1,0 +1,26 @@
+
+HTML
+<picker 
+            class='picker' bindchange="selectFn" data-indexName="roomIndex" name=""
+            value="{{roomList[roomIndex].id}}" range="{{roomList}}" range-key="name"
+          >
+            <view style="color:{{roomIndex?'#333333':'#c2c2c2'}}">{{roomIndex?roomList[roomIndex].name:'请选择'}}</view>
+          </picker>
+
+WXSS：
+.form_mdl .dl .dd .picker{display:block; width:100%; font-size:30rpx; color:#333;}
+
+JS：
+data: {
+  //装修房间号数组
+    roomList:[
+      { name: '房间1', id: 'id01' },
+      { name: '房间2', id: 'id02' }
+    ],  
+    roomIndex:null,
+  },
+//通用下拉选择方法
+  selectFn(e) {
+    var indexName = e.currentTarget.dataset.indexname;  //当前下拉选择定义的索引字段
+    this.setData({ [indexName]: e.detail.value });
+  },

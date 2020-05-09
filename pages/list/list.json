@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "活动中心",
+  "usingComponents": {
+    "list": "/components/list/list"
+  }
+}

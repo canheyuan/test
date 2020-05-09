@@ -1,0 +1,4 @@
+<list 
+  reach-data="{{reachData}}"
+  target-page="act_list"
+></list>
